@@ -1,0 +1,544 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    /* tirar toda a margem padrão que o navegador coloca. */
+    margin: 0;
+    padding: 0;
+}
+
+/* ****************************************************************************** */
+
+header {
+    /* Torna o elemento um flex container automaticamente transformando todos os seus filhos 
+    diretos em flex itens. */
+    display: flex;
+    /* Colocar a div centralizada no padrão flex box, desde claro tenha uma largura */
+    justify-content: center;
+    /* definindo a altura header */
+    height: 120px;
+}
+
+.container {
+    width: 990px;
+    /* Colocando em flex, colocar um ao lado do outro, antes estava em cima do outro */
+    display: flex;
+    /* Colocando um na ponta e outro na outra ponta */
+    justify-content: space-between;
+}
+
+.logo {
+    /* colocando o conteudo centralizado, mas centralizado na altura */
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    /* utilizo o display flex, junto com aling items
+     para centralizar a altura do menu */
+    display: flex;
+    align-items: center;
+}
+
+nav ul,
+nav li {
+    /* list-style estou retirando as bolinhas */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    /* para dexar os menus um ao lado do outro */
+    display: flex;
+}
+
+nav a {
+    /* display block para eu conseguir alterar tamanho, area do link para deixar grande.
+    Isse será aplicado em cada a */
+    display: block;
+    padding: 15px;
+    /* tirar o Undilerline do link */
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #727272;
+}
+
+nav .active a,
+nav a:hover {
+    /* deixar uma cor no link ativo */
+    background-color: #39aae1;
+    /* com o hover colocar um cor ao passar o mouse sobre o link */
+    /* e deixar com a cor branca */
+    color: #fff;
+    transition: 1s;
+}
+
+/* *****************************************************************************8 */
+
+#banner {
+    /* colocando a imagem no css */
+    /* como estamos na pasta css, temos que dar dois pontos para voltar a pasta assets
+    e assim acessar a pagina images */
+    background-image: url('../images/img1.jpg');
+    /* posicionar a imagem no meio */
+    background-position: center;
+    /* tamanho da imagem, e o cover vai expandir a imagem em telas maiores. */
+    background-size: cover;
+    /* para coseguir ver, precisamos colocar uma altura falsa */
+    height: 670px;
+    display: flex;
+    /* centralizar o conteudo */
+    justify-content: center;
+}
+
+/* deixar as dives uma abaixo da outra */
+.banner_column {
+    flex-direction: column;
+}
+.banner_text {
+    flex: 1;
+    /* nesse irei deixar altura automatica */
+    display: flex;
+    /* conteudo um abaixo do outro */
+    flex-direction: column;
+    /* deixar o conteudo no centro do espacamento */
+    justify-content: center;
+    
+}
+.banner_text h1 {
+    color: #fff;
+    font-size: 70px;
+    text-shadow: 0 2px rgb(39, 39, 39);
+    margin: 0;
+    padding: 0;
+    max-width: 350px;
+}
+.banner_text h2 {
+    color: #fff;
+    font-size: 21px;
+    text-shadow: 1px 2px rgb(39, 39, 39);
+    margin: 0;
+    padding: 0;
+    max-width: 350px;
+    margin-top: 30px;
+}
+.banner_options {
+    /* neste vou colocar uma altura fixa */
+    height: 210px;
+    /* recapitulando para memorizar, o display flex colocou das divs uma ao lado da outra. */
+    display: flex;
+    
+}
+.banner1,
+.banner2,
+.banner3 {
+    /* os três vao ter flex 1 pois iram ter o mesmo damanho dentro do conteiner */
+    flex: 1;
+    color: #fff;
+    padding: 20px;
+}
+
+.banner1 {
+    background-color: #39aae1;  
+}
+.banner2 {
+    background-color: #0079c7;   
+}
+.banner3 {
+    background-color: #2b4c99;  
+}
+.banner_title {
+    font-size: 21px;
+}
+.banner_desc {
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.banner_options button {
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 5px;
+    background-color: #0079c7;
+}
+
+.banner_options button a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.banner_options button:hover,
+.banner_options button a:hover {
+    color: #0079c7;
+    background-color: #fff;
+    transition: 1s;
+}
+
+.banner3 li {
+    list-style: none;
+    padding: 12px 0;
+    border-bottom: 1px solid #E0E0E0;
+    background-position: left center;
+    background-repeat: no-repeat;
+    line-height: 120%;
+    /* display: list-item; */
+}
+
+.hours-content{
+    display:flex;
+    justify-content:space-between;
+    border-bottom: 1px solid rgba(255, 253, 253,0.3);
+}
+
+.hours-content p{
+    margin: 13px 0;
+}
+
+/* *************************************************************************** */
+#geral {
+    display: flex;
+    justify-content: center;
+}
+
+#geral section {
+    flex: 2;
+}
+
+#geral aside {
+    flex: 1;
+}
+
+.widget_title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.widget_title_text {
+    color: #000;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.widget_title_bar {
+    background-color: #39aae1;
+    width: 50px;
+    height: 2px;
+    margin-top: 10px;
+}
+
+.widget_body {
+    display: flex;
+    flex-direction: column;
+}
+
+.departaments_header {
+    display:flex;
+    justify-content: space-between;
+}
+
+.departaments_content {
+ width: 150px;
+ height: 150px;   
+ background-color: #39aae1;
+ margin: 10px;
+}
+
+.medias li {
+    list-style: none;
+    padding: 12px 0;
+    border-bottom: 1px solid #E0E0E0;
+    background-position: left center;
+    background-repeat: no-repeat;
+    line-height: 120%;
+    /* display: list-item; */
+}
+
+.medias_icons{
+    display:flex;
+    justify-content:left;
+    border-top: 1px solid rgba(8, 8, 8, 0.3);
+}
+
+.medias_icons p{
+    margin: 13px 0;
+}
+
+.medias_icons .number{
+    font-weight: bold;
+}
+
+/* ************************************************************** */
+#geral {
+    margin-bottom: 20px;
+}
+section a {
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.top_space {
+    margin-top: 30px;
+}
+
+article {
+    flex: 1;
+    width: 300px;
+    margin-right: 20px;
+    /* margin-top: 10px; */
+}
+
+article .news_data {
+    display: flex;
+    margin-top: 30px;
+}
+
+
+article .news_posted_at {
+    background: #2B4C99;
+    color: #FFF;
+    font-size: 12;
+    padding: 10px;
+    margin-right: 2px;
+}
+
+article .news_comments {
+    background: #39AAE1;
+    color: #FFF;
+    font-size: 16px;
+    padding: 10px;
+}
+
+article .news_thumbnail {
+    margin-top: 30px;
+}
+
+article .news_thumbnail img {
+    width: 100%;
+    height: auto;
+}
+
+article .news_title {
+    margin: 25px 0;
+    color: #000;
+    font-size: 24px;
+}
+
+article .news_resume {
+    color: #000;
+    font-size: 14;
+    line-height: 20px;
+    text-align: justify;
+    /* margin-bottom: 05px; */
+}
+
+/* footer ********************************************************************** */
+footer {
+    background-color: #000;
+    /* color: #fff; */
+    display: flex;
+    justify-content: center;
+}
+
+.footer_menu {
+    display: flex;
+}
+.fm_1, .fm_2, .fm_3 {
+    flex: 1;
+    padding: 20px;
+}
+
+.footer_menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.fm_1{
+    background-color: #39aae1;
+}
+.fm_2 {
+    background-color: #0079c7;
+}
+.fm_3 {
+    background-color: #2b4c99;
+}
+
+.footer_area {
+    display: flex;
+    background-color: #000;
+}
+.footer_areaitem {
+    flex: 1;
+    color: #fff;
+    /* padding: 20px; */
+}
+.flex_column {
+    flex-direction: column;
+}
+
+footer .widget_title_text {
+    color: #fff;
+}
+
+.footer_copy {
+    border-top: 1px solid #2c2c2c;
+    margin-top: 20px;
+    padding: 5px;
+    color: #fff;
+    line-height: 40px;
+}
+
+.footer_copy span {
+    color: #727272;
+    font-size: 12px;
+}
+
+/* ************************************** */
+
+.widget_body {
+    display: flex;
+}
+
+.widget_body span {
+    color: #bbb;
+    margin-right: 10px;
+}
+
+.widget_body .info_box {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info_box .contact a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* ************************************************************** */
+.widget_body p,
+.widget_body a {
+    margin: 0;
+    color: #fff;
+    text-decoration: none;
+}
+.widget_body a {
+    margin-bottom: 10px;
+}
+
+.widget_body .blue_text {
+    color: #39aae1;
+    margin-top: 10px;
+}
+
+/* propriedades do botão mobile */
+.menu_mobile {
+    display: none;
+    width: 40px;
+    height: 40px;
+    /* background-color: #727272; */
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+
+.mm_line {
+    height: 3px;
+    background-color: #39aae1;
+}
+
+/* ************************************************************************** */
+                /* Deixando o site totalmente responsivo */
+
+@media (max-width:600px) {
+    /* A parti de 600px de largura maxima */
+
+    .banner_text {
+        padding: 20px;
+    }
+    .banner_text h1 {
+        font-size: 55px;
+    }
+    .banner_text h2 {
+        font-size: 17px;
+    }
+    .banner_options {
+        height: auto;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    /* ********************************** */
+    .container {
+        flex-direction: column;
+    }
+    #geral section {
+        padding: 25px;
+        margin-top: 20px;
+    }
+    #geral aside {
+        padding: 25px;
+    }
+    article {
+        width: auto;
+        /* margin-top: 10px; */
+    }
+
+    /* ************************************* */
+    .footer_menu,
+    .footer_area {
+        flex-direction: column;
+    }
+    .footer_area {
+        padding: 20px;
+    }
+    .footer_copy {
+        padding-left: 20px;
+        font-size: 70%;
+    }
+
+    /* ************ Botão do Menu ****************** */
+    /* colocando o menu ao lado da logo */
+    header .container {
+        flex-direction: row;
+    }
+    /* para o menu ficar abaixo do outro */
+    nav ul {
+       flex-direction: column; 
+       /* por padrão */
+       display: none;
+       position: absolute;
+       left: 0;
+       width: 100%;
+       background-color: #fff;
+    }
+    /* retirando a altura fixa */
+    header {
+        height: auto;
+    }
+    .logo {
+        padding-left: 20px;
+    }
+    .menu_mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+}
+
+
+
+
+
+
+
+
