@@ -1,3 +1,11 @@
-MEU PRIMEIRO SISTEMA NO GIT
+Meu primeiro sistema no GIT
 
-Alterando mais uma vez
+Desenvolvi um site para empresa Medicenter.
+
+Utilizei:
+HTML
+CSS
+MEDIA QUERY para deixar responsivo
+
+
+Material totalmente educacional.
